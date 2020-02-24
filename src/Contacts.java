@@ -39,4 +39,25 @@ public class Contacts {
         PersonNode node = new PersonNode(p);
         list.add(node);
     }
+    public void searchContact(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("You could search for a contact from their first names: ");
+        String name = sc.nextLine();
+        System.out.println("ok");
+        list.find(name);
+
+    }
+
+    public void deleteContact(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Here are all your contacts:");
+        list.printList(false);
+        System.out.print("Press the number against the contact to delete it: ");
+        int t = sc.nextInt();
+        list.removeAt(t);
+    }
+
+    public void showDetails(){
+        list.printList(true);
+    }
 }
