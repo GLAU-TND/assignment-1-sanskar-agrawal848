@@ -10,4 +10,28 @@ public class Main {
         System.out.println("Press 3 to search for a contact");
         System.out.println("Press 4 to delete a contact");
         System.out.println("Press 5 to exit program" + "\n");
+        while(true){
+            System.out.println("Enter your choice");
+            int t = sc.nextInt();
+            if(t == 1){
+                c.addPerson();
+            }
+            else if(t == 2){
+                c.showDetails();
+            }
+            else if(t == 3){
+                c.searchContact();
+            }
+            else if(t == 4){
+                c.deleteContact();
+            }
+            else if(t == 5){
+                break;
+            }
+            else {
+                System.out.println("Wrong Input");
+            }
+        }
     }
+}
+
